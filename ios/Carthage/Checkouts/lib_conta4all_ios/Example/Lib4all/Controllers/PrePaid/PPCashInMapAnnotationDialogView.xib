@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPCashInMapViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="270" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balao.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysJ-gw-drH">
+                    <rect key="frame" x="0.0" y="0.0" width="270" height="120"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saque e Pague no Pier X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kp-Kh-omd">
+                    <rect key="frame" x="15" y="35" width="250" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping Iguatemi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Aw-JQ-QCo">
+                    <rect key="frame" x="15" y="12" width="250" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Av. João Wallig, 1800/2264 - Acesso D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-Me-TCC">
+                    <rect key="frame" x="15" y="58" width="250" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uhv-Me-TCC" firstAttribute="leading" secondItem="4Kp-Kh-omd" secondAttribute="leading" id="AGU-US-3pz"/>
+                <constraint firstItem="4Kp-Kh-omd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="CkI-ZG-cXh"/>
+                <constraint firstItem="4Kp-Kh-omd" firstAttribute="top" secondItem="2Aw-JQ-QCo" secondAttribute="bottom" constant="2" id="HX6-bE-MZn"/>
+                <constraint firstItem="uhv-Me-TCC" firstAttribute="trailing" secondItem="4Kp-Kh-omd" secondAttribute="trailing" id="LuP-hp-naM"/>
+                <constraint firstItem="ysJ-gw-drH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OSU-ha-2ac"/>
+                <constraint firstItem="ysJ-gw-drH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YnM-1k-2oj"/>
+                <constraint firstItem="2Aw-JQ-QCo" firstAttribute="leading" secondItem="4Kp-Kh-omd" secondAttribute="leading" id="ahB-s9-ALQ"/>
+                <constraint firstAttribute="trailing" secondItem="ysJ-gw-drH" secondAttribute="trailing" id="dn2-LK-By1"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uhv-Me-TCC" secondAttribute="bottom" constant="10" id="g2m-bf-925"/>
+                <constraint firstItem="2Aw-JQ-QCo" firstAttribute="trailing" secondItem="4Kp-Kh-omd" secondAttribute="trailing" id="gtl-93-cjY"/>
+                <constraint firstItem="2Aw-JQ-QCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="lEL-Lm-Ui7"/>
+                <constraint firstAttribute="trailing" secondItem="4Kp-Kh-omd" secondAttribute="trailing" constant="5" id="oCg-dx-hMi"/>
+                <constraint firstItem="uhv-Me-TCC" firstAttribute="top" secondItem="4Kp-Kh-omd" secondAttribute="bottom" constant="2" id="uC9-NG-eIW"/>
+                <constraint firstAttribute="bottom" secondItem="ysJ-gw-drH" secondAttribute="bottom" id="uOx-kD-S7l"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29" y="63"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="balao.png" width="249" height="100"/>
+    </resources>
+</document>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardTypeSelectorViewController">
+            <connections>
+                <outlet property="dataTextField" destination="fv8-gm-EBk" id="mnN-g4-tUp"/>
+                <outlet property="descriptionLabel" destination="NSP-Ju-DEJ" id="zaz-7z-DCE"/>
+                <outlet property="imageDisclosure" destination="HLG-LZ-3gg" id="mAM-hb-zRp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view tag="77" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZ6-hV-gFO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precisamos saber o seu tipo de cartão." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSP-Ju-DEJ">
+                            <rect key="frame" x="20" y="79" width="335" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.98271197079999995" green="0.98345524070000001" blue="0.98282712699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NSP-Ju-DEJ" secondAttribute="trailing" constant="20" id="9nj-Qc-V2d"/>
+                        <constraint firstItem="NSP-Ju-DEJ" firstAttribute="leading" secondItem="sZ6-hV-gFO" secondAttribute="leading" constant="20" id="LEn-Q6-hg5"/>
+                        <constraint firstItem="NSP-Ju-DEJ" firstAttribute="top" secondItem="sZ6-hV-gFO" secondAttribute="top" constant="79" id="U4w-bF-0Li"/>
+                        <constraint firstAttribute="height" constant="222" id="t8a-fx-UhL"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVV-4z-IhT" customClass="MainActionButton">
+                    <rect key="frame" x="20" y="598" width="335" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="e40-7h-g60"/>
+                    </constraints>
+                    <state key="normal" title="Próximo"/>
+                    <connections>
+                        <action selector="nextButtonTouched:" destination="-1" eventType="touchUpInside" id="Ztp-ZQ-f8d"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fv8-gm-EBk" customClass="UIFloatLabelTextField">
+                    <rect key="frame" x="20" y="247" width="335" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="nSj-Zm-Lty"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView userInteractionEnabled="NO" tag="77" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconDownArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="HLG-LZ-3gg">
+                    <rect key="frame" x="339" y="263" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="Fjo-a0-GFc"/>
+                        <constraint firstAttribute="height" constant="15" id="VG1-Jp-2Iu"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sZ6-hV-gFO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5T8-YW-WMB"/>
+                <constraint firstItem="OVV-4z-IhT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="D2t-8c-xXj"/>
+                <constraint firstAttribute="trailing" secondItem="sZ6-hV-gFO" secondAttribute="trailing" id="Fqz-xh-uvQ"/>
+                <constraint firstItem="HLG-LZ-3gg" firstAttribute="centerY" secondItem="fv8-gm-EBk" secondAttribute="centerY" id="J7B-Oa-8QH"/>
+                <constraint firstAttribute="bottom" secondItem="OVV-4z-IhT" secondAttribute="bottom" constant="22" id="JzP-qb-PPl"/>
+                <constraint firstItem="fv8-gm-EBk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="NyN-ba-CKy"/>
+                <constraint firstItem="fv8-gm-EBk" firstAttribute="top" secondItem="sZ6-hV-gFO" secondAttribute="bottom" constant="25" id="Pys-Ln-QHQ"/>
+                <constraint firstItem="sZ6-hV-gFO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YaS-zH-fBg"/>
+                <constraint firstAttribute="trailing" secondItem="OVV-4z-IhT" secondAttribute="trailing" constant="20" id="abd-NB-AMu"/>
+                <constraint firstAttribute="trailing" secondItem="HLG-LZ-3gg" secondAttribute="trailing" constant="21" id="tZS-nS-gDb"/>
+                <constraint firstAttribute="trailing" secondItem="fv8-gm-EBk" secondAttribute="trailing" constant="20" id="ttW-6u-e9V"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="87.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconDownArrow.png" width="120" height="120"/>
+    </resources>
+</document>

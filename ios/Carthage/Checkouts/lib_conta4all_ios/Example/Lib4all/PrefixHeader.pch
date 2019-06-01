@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  Example
+//
+//  Created by 4all on 4/5/16.
+//  Copyright © 2016 4all. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import "LoadingViewController.h"
+#import "PopUpBoxViewController.h"
+#import "NSBundle+Lib4allBundle.h"
+#import "UIImage+Lib4all.h"
+
+#endif /* PrefixHeader_pch */

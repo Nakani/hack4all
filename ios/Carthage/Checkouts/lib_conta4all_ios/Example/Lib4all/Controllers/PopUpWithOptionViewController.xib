@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpWithOptionViewController">
+            <connections>
+                <outlet property="alertDescription" destination="v2g-Fr-Paw" id="SQ4-pu-WWn"/>
+                <outlet property="alertTitle" destination="Ota-nO-6gK" id="ANX-0Y-fiQ"/>
+                <outlet property="boxView" destination="Hje-wW-MzG" id="iSu-Rf-JsU"/>
+                <outlet property="firstOptionButton" destination="Hj3-iY-Xwt" id="UEj-fS-ZYl"/>
+                <outlet property="secondOptionButton" destination="9YL-zh-eAk" id="5PM-Ze-f4t"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="aVt-2J-TP1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hje-wW-MzG">
+                    <rect key="frame" x="35" y="120" width="305" height="363"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ota-nO-6gK">
+                            <rect key="frame" x="130.5" y="64" width="44" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YL-zh-eAk">
+                            <rect key="frame" x="28" y="305" width="249" height="30"/>
+                            <state key="normal" title="Second Option"/>
+                            <connections>
+                                <action selector="didPressSecondOptionButton:" destination="-1" eventType="touchUpInside" id="TSt-XS-ENe"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v2g-Fr-Paw">
+                            <rect key="frame" x="8" y="104" width="289" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hj3-iY-Xwt" customClass="MainActionButton">
+                            <rect key="frame" x="28" y="228" width="249" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="2gb-Bk-iGm"/>
+                            </constraints>
+                            <state key="normal" title="First Option"/>
+                            <connections>
+                                <action selector="didPressFirstOptionButton:" destination="-1" eventType="touchUpInside" id="wKi-uW-VEf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="9YL-zh-eAk" firstAttribute="leading" secondItem="Hje-wW-MzG" secondAttribute="leading" constant="28" id="257-Jp-sg9"/>
+                        <constraint firstAttribute="trailing" secondItem="9YL-zh-eAk" secondAttribute="trailing" constant="28" id="8Kt-be-an7"/>
+                        <constraint firstItem="Ota-nO-6gK" firstAttribute="centerX" secondItem="Hje-wW-MzG" secondAttribute="centerX" id="A68-FL-0zZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Hj3-iY-Xwt" secondAttribute="trailing" constant="28" id="ELb-pW-6m0"/>
+                        <constraint firstItem="9YL-zh-eAk" firstAttribute="top" secondItem="Hj3-iY-Xwt" secondAttribute="bottom" constant="30" id="FVn-l4-sgE"/>
+                        <constraint firstItem="Hj3-iY-Xwt" firstAttribute="leading" secondItem="Hje-wW-MzG" secondAttribute="leading" constant="28" id="Max-6W-4JB"/>
+                        <constraint firstAttribute="bottom" secondItem="9YL-zh-eAk" secondAttribute="bottom" constant="28" id="Pcg-x4-nCe"/>
+                        <constraint firstAttribute="height" constant="363" id="R4K-Ut-lPF"/>
+                        <constraint firstItem="Ota-nO-6gK" firstAttribute="top" secondItem="Hje-wW-MzG" secondAttribute="top" constant="64" id="R9e-r7-3hK"/>
+                        <constraint firstItem="v2g-Fr-Paw" firstAttribute="top" secondItem="Ota-nO-6gK" secondAttribute="bottom" constant="19" id="Ud7-9o-d5A"/>
+                        <constraint firstItem="Hj3-iY-Xwt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="v2g-Fr-Paw" secondAttribute="bottom" constant="35" id="mdz-aL-1Dr"/>
+                        <constraint firstItem="v2g-Fr-Paw" firstAttribute="leading" secondItem="Hje-wW-MzG" secondAttribute="leading" constant="8" id="thb-Uj-317"/>
+                        <constraint firstAttribute="trailing" secondItem="v2g-Fr-Paw" secondAttribute="trailing" constant="8" id="uY1-Hr-h7x"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Hje-wW-MzG" firstAttribute="top" secondItem="qyP-DV-3BM" secondAttribute="top" constant="100" id="EUD-PF-9uV"/>
+                <constraint firstItem="Hje-wW-MzG" firstAttribute="leading" secondItem="aVt-2J-TP1" secondAttribute="leading" constant="35" id="MfI-Kf-j7N"/>
+                <constraint firstAttribute="trailing" secondItem="Hje-wW-MzG" secondAttribute="trailing" constant="35" id="h3y-vX-1S1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="qyP-DV-3BM"/>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
