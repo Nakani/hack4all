@@ -16,7 +16,7 @@ export class InitialScreen extends Component {
       <BaseComponent
         headerName={"home"}
         headerStyle={{ backgroundColor: "#E08C00" }}
-        headerDisplay={true}
+        headerDisplay={false}
         headerName={navigation.state.routeName}
       >
         {this.renderLists(lists)}
