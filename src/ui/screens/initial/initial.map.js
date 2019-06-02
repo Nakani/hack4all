@@ -1,13 +1,14 @@
-import { getLists } from '../../../reduxs/lists/lists.action';
+import { login, getTabDetails } from "../../../reduxs/index";
 const mapStateToProps = store => {
-  const { lists } = store
-  return lists
+  const { lists } = store;
+  return lists;
 };
 
 const mapDispatchToProps = {
-  getLists,
-}
+  login,
+  getTabDetails
+};
 export const maps = {
   mapStateToProps,
   mapDispatchToProps
-}
+};

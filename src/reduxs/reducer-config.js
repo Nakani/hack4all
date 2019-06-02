@@ -1,10 +1,12 @@
-import { combineReducers } from 'redux'
-import listReducer from './lists/lists.reducer'
-import detailReducer from './detail/detail.reducer'
+import { combineReducers } from "redux";
+import paymentMethod from "./paymentMethod/reducer";
+import auth from "./auth/reducer";
+import tab from "./tab/reducer";
 
 const rootReducer = combineReducers({
-  lists: listReducer,
-  detail: detailReducer,
-})
+  auth,
+  paymentMethod,
+  tab
+});
 
-export default rootReducer
+export default rootReducer;

@@ -3,9 +3,9 @@ const Colors = {
 };
 
 const BackgroundColor = {
-  base: "#262626",
-  header: "#262626",
-  footer: "#262626"
+  base: "#333",
+  header: "#333",
+  footer: "#333"
 };
 
 export const Theme = {

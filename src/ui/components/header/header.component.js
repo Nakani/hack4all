@@ -1,11 +1,15 @@
 import React, { PureComponent } from "react";
-import { Header, Left, Button, Icon, Body, Title, Right } from "native-base";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { Styles } from "./styles/header.styles";
 
 export class HeaderComponent extends PureComponent {
   render() {
     const { ...rest } = this.props;
-    return (
+    return rest.transparent ? (
+      <View>
+        <Image source={require("../../../assets/images/logo/logo.png")} />
+      </View>
+    ) : (
       <Header
         style={{
           backgroundColor: "#262626"

@@ -8,7 +8,12 @@ import {
 import { Platform } from "react-native";
 import { Icon } from "native-base";
 import { Theme } from "./config/theme";
-import { HomeScreenConnected, InitialScreenConnected } from "./ui/screens";
+import {
+  HomeScreenConnected,
+  InitialScreen,
+  LoginScreen,
+  ComandaScreenConnected
+} from "./ui/screens";
 import { HeaderComponent } from "./ui/components";
 
 const navConfig = navigation => ({
@@ -42,10 +47,27 @@ const HomeStack = createStackNavigator({
     }
   }
 });
+const ComandaStack = createStackNavigator({
+  Comanda: {
+    screen: ComandaScreenConnected,
+    navigationOptions: {
+      header: null
+    }
+  }
+});
 
 const InitialStack = createStackNavigator({
   Perfil: {
-    screen: InitialScreenConnected,
+    screen: InitialScreen,
+    navigationOptions: {
+      header: null
+    }
+  }
+});
+
+const LoginStack = createStackNavigator({
+  Login: {
+    screen: LoginScreen,
     navigationOptions: {
       header: null
     }
@@ -58,6 +80,9 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   switch (routeName) {
     case "Home":
       iconName = "home";
+      break;
+    case "Comanda":
+      iconName = "qrcode";
       break;
     case "Perfil":
       iconName = "user-circle-o";
@@ -75,6 +100,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 const TabNavigator = createBottomTabNavigator(
   {
     Home: HomeStack,
+    Comanda: ComandaStack,
     Perfil: InitialStack
   },
   {
@@ -94,7 +120,7 @@ const TabNavigator = createBottomTabNavigator(
         backgroundColor: "transparent"
       },
       style: {
-        backgroundColor: "rgba(38, 38, 38, 0.3)",
+        backgroundColor: "rgba(51, 51, 51, 0.3)",
         borderTopWidth: 0,
         position: "absolute",
         left: 0,
@@ -106,6 +132,12 @@ const TabNavigator = createBottomTabNavigator(
 );
 
 const AppStack = createStackNavigator({
+  Login: {
+    screen: LoginStack,
+    navigationOptions: {
+      header: null
+    }
+  },
   Home: {
     screen: TabNavigator,
     navigationOptions: {
